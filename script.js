@@ -1,3 +1,19 @@
+(function() {
+  // 1) Load the gtag.js library into the <head>
+  var gtagScript = document.createElement('script');
+  gtagScript.async = true;
+  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-WC9WXR0CY5';
+  document.head.appendChild(gtagScript);
+
+  // 2) Set up dataLayer & helper
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+
+  // 3) Initialize it
+  gtag('js', new Date());
+  gtag('config', 'G-WC9WXR0CY5');
+})();
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("r-touch") === null) {
