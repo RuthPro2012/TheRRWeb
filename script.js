@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (["auth/invalid-email","auth/user-not-found","auth/wrong-password"].includes(err.code)) {
             errorLoginMsg.textContent = "Incorrect email or password.";
           } else if (err.code === "auth/user-disabled") {
-            errorLoginMsg.textContent = "Your account has been disabled, Contact Support: therrweb@gmail.com";
+            errorLoginMsg.textContent = "Your account has been disabled, Contact Support: support@therrweb.atlassian.net or go to therrweb.atlassian.net";
           } else if (err.message && err.message.toLowerCase().includes("network error")) {
             errorLoginMsg.textContent = "There is a network issue, try again later.";
           } else {
